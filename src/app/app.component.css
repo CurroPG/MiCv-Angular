@@ -1,11 +1,20 @@
 header {
-  background-color: aqua;
+  background-color: #2c3e50;
+  color: white;
+  padding: 1.5rem 2rem;
 }
 
-header>main {
-  display: flex;
-  gap: 1rem;
-  flex-direction: row;
+header h1 {
+  font-size: 2rem;
+}
+
+header h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: white;
+  border-bottom: none;
+  margin: 0.3rem 0 0 0;
+  padding: 0;
 }
 
 .main {
@@ -15,16 +24,51 @@ header>main {
 }
 
 aside {
-  width: 20%;
-  background-color: lightgray;
+  width: 25%;
+  background-color: #ecf0f1;
+  padding: 1.5rem;
 }
 
 main {
-  background-color: lightblue;
+  flex: 1;
+  background-color: white;
+  padding: 1.5rem 2rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #2c3e50;
+  padding-bottom: 0.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+aside h2:first-child,
+main h2:first-child {
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+aside ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+p {
+  line-height: 1.5;
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
 }
