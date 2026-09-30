@@ -17,10 +17,8 @@ export class AppComponent {
   numTelefono = '722 30 91 12';
   ciudadNacimiento = 'Antequera';
   descripcion = 'Soy un desarrollador de aplicaciones multiplataforma con experiencia en la creación de soluciones innovadoras y eficientes. Me apasiona la tecnología y siempre estoy buscando aprender nuevas habilidades para mejorar mis proyectos.';
-  experiencia = 'Desarrollador de la pagina web macatuma.com';
-  experiencia2 = ' Certificado del curso de DevOps de LemonCode Academy';
-  experiencia3 = ' Prácticas de php y Wordpress en la empresa Sweet Code Chef';
-  formacion = 'Grado en Ingeniería Informática';
+  experiencia = ['Desarrollador de la pagina web macatuma.com', 'Certificado del curso de DevOps de LemonCode Academy', 'Prácticas de php y Wordpress en la empresa Sweet Code Chef']
+  formacion = 'Desarrollo de aplicaciones multiplataforma en CPIFP Alan Turing, Málaga';
   tecnologias = 'JavaScript, TypeScript, Angular, Node.js, Python, Java, SQL, HTML, CSS, Git, Docker';
 
   fecha = new Date();

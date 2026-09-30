@@ -1,4 +1,5 @@
 <header>
+  <img ngSrc="foto.jpg" width="120" height="120" alt="Foto de Curro">
   <h1>{{ nombre }}</h1>
   <h2>{{ profesion }}</h2>
 </header>
@@ -20,9 +21,10 @@
     <p>{{ descripcion }}</p>
 
     <h2>Experiencia</h2>
-    <li>{{ experiencia }}</li>
-    <li>{{ experiencia2 }}</li>
-    <li>{{ experiencia3 }}</li>
+    <ul>@for (exp of experiencia; track exp) {
+      <li>{{ exp }}</li>
+      }
+    </ul>
 
     <h2>Formación</h2>
     <p>{{ formacion }}</p>
@@ -33,4 +35,3 @@
 <footer>
   <p> {{ nombre }} - {{ fecha | date: 'dd/mm/yyyy' }} </p>
 </footer>
-
