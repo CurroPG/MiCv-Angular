@@ -1,37 +1,6 @@
-<header>
-  <img ngSrc="foto.jpg" width="120" height="120" alt="Foto de Curro">
-  <h1>{{ nombre }}</h1>
-  <h2>{{ profesion }}</h2>
-</header>
-<div class="main">
-  <aside>
-    <h2>Contacto</h2>
-    <li>{{ ciudadNacimiento }}</li>
-    <li>{{ numTelefono }}</li>
-    <li>{{ email }}</li>
+<app-header></app-header>
 
-    <h2>Idiomas</h2>
-    <li>Español</li>
-    <li>Inglés</li>
-  </aside>
+<app-main-layout></app-main-layout>
 
+<app-footer></app-footer>
 
-  <main>
-    <h2>Sobre mí</h2>
-    <p>{{ descripcion }}</p>
-
-    <h2>Experiencia</h2>
-    <ul>@for (exp of experiencia; track exp) {
-      <li>{{ exp }}</li>
-      }
-    </ul>
-
-    <h2>Formación</h2>
-    <p>{{ formacion }}</p>
-    <h2>Tecnologías</h2>
-    <p>{{ tecnologias }}</p>
-  </main>
-</div>
-<footer>
-  <p> {{ nombre }} - {{ fecha | date: 'dd/mm/yyyy' }} </p>
-</footer>

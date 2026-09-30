@@ -1,0 +1,18 @@
+:host {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1.5rem 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: white;
+  border-bottom: none;
+  margin: 0.3rem 0 0 0;
+  padding: 0;
+}

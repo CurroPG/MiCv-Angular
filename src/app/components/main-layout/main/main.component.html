@@ -1,0 +1,14 @@
+<h2>Sobre mí</h2>
+<p>{{ descripcion }}</p>
+
+<h2>Experiencia</h2>
+<ul>
+  @for (exp of experiencia; track exp) {
+    <li>{{ exp }}</li>
+  }
+</ul>
+
+<h2>Formación</h2>
+<p>{{ formacion }}</p>
+<h2>Tecnologías</h2>
+<p>{{ tecnologias }}</p>
