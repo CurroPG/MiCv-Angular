@@ -24,3 +24,18 @@ li {
 p {
   line-height: 1.5;
 }
+
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.etiqueta {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  border: 1px solid #2c3e50;
+  border-radius: 1rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+}

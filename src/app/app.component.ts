@@ -1,6 +1,4 @@
-import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainLayoutComponent } from './components/main-layout/main-layout.component';
@@ -8,10 +6,17 @@ import { MainLayoutComponent } from './components/main-layout/main-layout.compon
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DatePipe, HeaderComponent, FooterComponent, MainLayoutComponent],
+  imports: [HeaderComponent, FooterComponent, MainLayoutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'cv';
+
+  seccionActivada = 'resumen';
+
+  cambiarSeccion(seccion: string){
+    this.seccionActivada = seccion;
+    console.log(this.seccionActivada)
+  }
 }

@@ -1,7 +1,18 @@
-<header>
-  <img [ngSrc]="foto" width="90" height="120" alt="Foto de Curro Portillo" priority>
-  <div>
+<img [ngSrc]="foto" width="90" height="120" alt="Foto de Curro Portillo" priority>
+<div>
     <h1>{{ nombre }}</h1>
     <h2>{{ profesion }}</h2>
-  </div>
-</header>
+</div>
+<nav>
+    <button [class.activo]="seccionActiva() === 'resumen'"
+            [disabled]="seccionActiva() === 'resumen'"
+            (click)="seleccionar('resumen')">Resumen</button>
+
+    <button [class.activo]="seccionActiva() === 'experiencia'"
+            [disabled]="seccionActiva() === 'experiencia'"
+            (click)="seleccionar('experiencia')">Experiencia</button>
+
+    <button [class.activo]="seccionActiva() === 'formacion'"
+            [disabled]="seccionActiva() === 'formacion'"
+            (click)="seleccionar('formacion')">Formación</button>
+</nav>

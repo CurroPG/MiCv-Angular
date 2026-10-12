@@ -1,17 +1,36 @@
-<main>
-  <h2>Sobre mí</h2>
-  <p>{{ descripcion }}</p>
+@switch (seccion()) {
+  @case ('resumen') {
+    <h2>Sobre mí</h2>
+    <p>{{ descripcion }}</p>
+  }
+  @case ('experiencia') {
+    <h2>Experiencia</h2>
+    <ul>
+      @for (exp of experiencias; track exp.id) {
+        <li>
+          <strong>{{ exp.puesto }}</strong> en {{ exp.empresa }}<br>
+          <em>{{ exp.periodo }}</em>
+          <p>{{ exp.descripcion }}</p>
+        </li>
+      } @empty { <li>Todavía no se ha añadido experiencia profesional</li> }
+    </ul>
+  }
+  @case ('formacion') {
+    <h2>Formación</h2>
+    <p>{{ formacion }}</p>
+  }
+  @default {
+    <p>selecciona una sección</p>
+  }
+}
 
-  <h2>Experiencia</h2>
-  <ul>
-    @for (exp of experiencia; track exp) {
-    <li>{{ exp }}</li>
-    }
-  </ul>
+<h2>Tecnologías</h2>
+<div class="etiquetas">
+  @for (tec of tecnologias; track tec) {
+    <button class="etiqueta" (click)="seleccionarTecnologia(tec)">{{ tec }}</button>
+  }
+</div>
 
-  <h2>Formación</h2>
-  <p>{{ formacion }}</p>
-  <h2>Tecnologías</h2>
-  <p>{{ tecnologias }}</p>
-
-</main>
+@if (tecnologiaSeleccionada) {
+  <p>Tecnología seleccionada: {{ tecnologiaSeleccionada }}</p>
+}

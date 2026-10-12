@@ -1,6 +1,6 @@
-<app-header></app-header>
+<app-header (seccionSeleccionada)="cambiarSeccion($event)" [seccionActiva]="seccionActivada"></app-header>
 
-<app-main-layout></app-main-layout>
+<app-main-layout [seccion]="seccionActivada"></app-main-layout>
 
 <app-footer></app-footer>
 
