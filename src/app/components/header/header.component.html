@@ -3,3 +3,16 @@
     <h1>{{ nombre }}</h1>
     <h2>{{ profesion }}</h2>
 </div>
+<nav>
+    <button [class.activo]="seccionActiva() === 'resumen'"
+            [disabled]="seccionActiva() === 'resumen'"
+            (click)="seleccionar('resumen')">Resumen</button>
+
+    <button [class.activo]="seccionActiva() === 'experiencia'"
+            [disabled]="seccionActiva() === 'experiencia'"
+            (click)="seleccionar('experiencia')">Experiencia</button>
+
+    <button [class.activo]="seccionActiva() === 'formacion'"
+            [disabled]="seccionActiva() === 'formacion'"
+            (click)="seleccionar('formacion')">Formación</button>
+</nav>  

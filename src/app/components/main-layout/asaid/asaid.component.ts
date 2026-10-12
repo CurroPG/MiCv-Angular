@@ -10,4 +10,12 @@ export class AsaidComponent {
   email = '211curroportillo@gmail.com';
   numTelefono = '722 30 91 12';
   ciudadNacimiento = 'Antequera';
+
+  mostrarContacto = true;
+
+  cambiarContacto(){
+    if(this.mostrarContacto)
+      this.mostrarContacto = false
+    else this.mostrarContacto = true
+  }
 }

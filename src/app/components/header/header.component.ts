@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common'; 
+import { Component, input, output } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -11,4 +11,13 @@ export class HeaderComponent {
   foto = 'curro_portillo-removebg-preview.png';
   nombre = 'Curro Portillo Guerrero';
   profesion = 'Desarrollo de aplicaciones multiplataforma';
+
+  seccionSeleccionada = output<string>();
+  seccionActiva = input<string>();
+
+  seleccionar(seccion: string) {
+    console.log(seccion);
+    this.seccionSeleccionada.emit(seccion);
+  }
 }
+
